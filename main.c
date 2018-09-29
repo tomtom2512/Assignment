@@ -71,7 +71,7 @@ void saveToFile() {
 
     fp = fopen("List of Students", "a");
     for (int i = 0; i < currentIndex; i++) {
-        fprintf(fp, "%-20.5s %-5s %-30s %-5s %-20d\n", listOfStudent[i].studentId, "|", listOfStudent[i].name, "|",
+        fprintf(fp, "%-20s %-5s %-50s %-5s %-50s\n", listOfStudent[i].studentId, "|", listOfStudent[i].name, "|",
                 listOfStudent[i].phoneNumber);
     }
 
@@ -81,7 +81,7 @@ void saveToFile() {
 
 void readFromFile() {
 
-    printf("%-20s %-5s %-30s %-5s %-20s\n", "Ma sinh vien", "|", "Ten", "|", "So dien thoai");
+    printf("%-20s %-5s %-50s %-5s %-50s\n", "Ma sinh vien", "|", "Ten", "|", "So dien thoai");
     fp = fopen("List of Students", "r");
     int bufferSize = 500;
     char buffer[bufferSize];
